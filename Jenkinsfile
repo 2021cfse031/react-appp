@@ -17,7 +17,7 @@ pipeline {
         stage('Test') {
             steps { 
                 nodejs(nodeJSInstallationName: 'nodejs18') {
-                bat 'node run test'
+                bat 'npm run test'
                 }
             }
         }

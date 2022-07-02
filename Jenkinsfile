@@ -10,6 +10,7 @@ pipeline {
             steps {
                 nodejs(nodeJSInstallationName: 'nodejs18') {
                 sh 'npm install' 
+                sh 'npm install --save-dev sonarqube-scanner'
                 }
             }
         }

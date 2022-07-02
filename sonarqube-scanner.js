@@ -6,8 +6,8 @@ scanner(
   password:"",
   options: {
     "sonar.sources": "./src",
-    "sonar.projectKey": "react",
-    "sonar.login":"401616d41c7e8fea09f091b64212c9fff2dd8954",
+    "sonar.projectKey": "app",
+    "sonar.login":"5a4d85805e32dc64a1c81b81b2812c96c92a5e3a",
     "sonar.exclusions": "**/*.test.tsx",
     "sonar.tests": "./src",
     "sonar.test.inclusions": "**/*.test.js,**/*.test.js",

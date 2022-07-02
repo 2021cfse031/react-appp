@@ -14,12 +14,18 @@ pipeline {
                 }
             }
         }
-        stage('Test') {
-            steps { 
-                nodejs(nodeJSInstallationName: 'nodejs18') {
-                bat 'npm run test'
+        stage('SonarQube analysis') {
+            steps {
+                withSonarQubeEnv('SonarQube') {
+                    bat "./gradlew sonarqube"
                 }
             }
+        }
+        stage("Quality gate") {
+            steps {
+                waitForQualityGate abortPipeline: true
+            }
+        
         }
     }   
 }

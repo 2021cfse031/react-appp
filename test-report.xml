@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testExecutions version="1">
   <file path="C:\Users\kiran\react-appp\src\App.test.js">
-    <testCase name="renders Dashboards title" duration="365"/>
+    <testCase name="renders Dashboards title" duration="301"/>
   </file>
 </testExecutions>

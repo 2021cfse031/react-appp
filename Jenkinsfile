@@ -17,8 +17,7 @@ pipeline {
         stage('Test') {
             steps { 
                 nodejs(nodeJSInstallationName: 'nodejs18') {
-                bat 'npm install --save-dev sonarqube-scanner'
-                bat 'npm install --save-dev jest-sonar-reporter'
+                bat 'node sonarqube-scanner.js',
                 bat 'npm run test'
                 }
             }

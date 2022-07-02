@@ -10,16 +10,16 @@ pipeline {
             steps {
                 nodejs(nodeJSInstallationName: 'nodejs18') {
                 sh 'npm install' 
-                sh 'npm start'
+                // sh 'npm install --save-dev sonarqube-scanner'
                 }
             }
         }
-        // stage('Test') {
-        //     steps { 
-        //         nodejs(nodeJSInstallationName: 'nodejs18') {
-        //         sh 'node sonarqube-scanner.js'
-        //         }
-        //     }
-        // }
+        stage('Test') {
+            steps { 
+                nodejs(nodeJSInstallationName: 'nodejs18') {
+                sh 'node run test'
+                }
+            }
+        }
     }   
 }

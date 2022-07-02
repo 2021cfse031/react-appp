@@ -11,8 +11,7 @@ scanner(
     "sonar.exclusions": "**/*.test.js",
     "sonar.tests": "./src",
     "sonar.test.inclusions": "App.test.js",
-    "sonar.typescript.lcov.reportPaths": "coverage/lcov.info",
-    "sonar.testExecutionReportPaths": "test-report.xml"
+    "sonar.typescript.lcov.reportPaths": "coverage/lcov.info"
   },
 },
 () => process.exit()

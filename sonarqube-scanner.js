@@ -8,7 +8,7 @@ scanner(
     "sonar.sources": "./src",
     "sonar.projectKey": "app",
     "sonar.login":"5a4d85805e32dc64a1c81b81b2812c96c92a5e3a",
-    "sonar.exclusions": "**/*.test.tsx",
+    "sonar.exclusions": "**/*.test.js",
     "sonar.tests": "./src",
     "sonar.test.inclusions": "**/*.test.js,**/*.test.js",
     "sonar.typescript.lcov.reportPaths": "coverage/lcov.info",

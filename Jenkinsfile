@@ -8,7 +8,9 @@ pipeline {
     stages {
         stage('Build') { 
             steps {
+                nodejs(nodeJSInstallationName: 'UI') {
                 sh 'npm install' 
+                }
             }
         }
     }

@@ -10,7 +10,7 @@ scanner(
     "sonar.login":"5a4d85805e32dc64a1c81b81b2812c96c92a5e3a",
     "sonar.exclusions": "**/*.test.js",
     "sonar.tests": "./src",
-    "sonar.test.inclusions": "**/*.test.js,**/*.test.js",
+    "sonar.test.inclusions": "App.test.js",
     "sonar.typescript.lcov.reportPaths": "coverage/lcov.info",
     "sonar.testExecutionReportPaths": "test-report.xml"
   },

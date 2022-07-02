@@ -13,5 +13,12 @@ pipeline {
                 }
             }
         }
-    }
+        stage('Test') {
+            steps { 
+                nodejs(nodeJSInstallationName: 'nodejs18') {
+                sh 'node run test'
+                }
+            }
+        }
+    }   
 }

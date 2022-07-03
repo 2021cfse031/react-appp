@@ -21,31 +21,14 @@ pipeline {
                 }
             }
         }
-        // stage('Run') { 
-        //     steps  {
-        //         parallel (
-        //         a: {
-        //             bat 'npm start'
-        //         },
-        //         b: {
-        //             bat 'python manage.py runserver --port=8001'
-        //         }
-        //         )
-        //     }
-        // }
         stage('Run') {  
             steps {
-                parallel {
-                    a: {
-                        bat 'npm start'
-                    }
-                    b: {
+                        bat 'npm build'
                         bat 'node webdriver.js'
-                    }
                 }
             }
         }
-        stage('Start Bakend Server') {
+        stage('Start Backend Server') {
             steps {
                 echo 'its completed successfully'
             }

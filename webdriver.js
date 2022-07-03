@@ -1,15 +1,23 @@
 require('chromedriver');
+const { By } = require('selenium-webdriver');
 const webdriver = require("selenium-webdriver");
 
 const driver = new webdriver.Builder().forBrowser("chrome").build();
 
 // ask the browser to open a page
-driver.navigate().to("http://localhost:3000")
-.then(driver.navigate().to('http://localhost:3000/managedrive'))
 
 
-await driver.findElement(web.By.xpath(`//*[@id="root"]/div/div[2]/div/div/div[1]/form/div[1]/label/input`)).click();
-  const label = 
-  await driver.findElement(web.By.xpath(`//*[@id="root"]/div/div[2]/div/div/div[1]/form/div[2]/label/select`)).getText();
-  await driver.findElement(web.By.xpath(`//*[@id="root"]/div/div/div/div[1]/div[1]/input`)).sendKeys("Item New");
-  
+function bookvaccination() {
+    driver.findElement(By.css(".formdate")).sendKeys("25-07-2022");
+    driver.findElement(webdriver.By.xpath('//*[@id="places"]/option[3]')).click();
+    driver.findElement(webdriver.By.xpath('//*[@id="counts"]/option[3]')).click();
+    driver.findElement(webdriver.By.xpath('//*[@id="formbookbtn"]')).click();
+    let time1;
+    function navigatetohome() {
+        driver.navigate().to("http://localhost:3000/home")
+    }
+    time1 = setTimeout(navigatetohome, 10000);
+}
+
+driver.navigate().to("http://localhost:3000/home")
+.then(driver.navigate().to('http://localhost:3000/managedrive')).then(bookvaccination());

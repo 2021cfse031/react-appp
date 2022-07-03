@@ -9,7 +9,7 @@ pipeline {
         stage('Build') { 
             steps {
                 nodejs(nodeJSInstallationName: 'nodejs18') {
-                bat 'npm install' 
+                sh 'npm install' 
                 // sh 'npm install --save-dev sonarqube-scanner'
                 }
             }
@@ -17,8 +17,8 @@ pipeline {
         stage('Test') {
             steps { 
                 nodejs(nodeJSInstallationName: 'nodejs18') {
-                bat 'node sonarqube-scanner.js'
-                bat 'npm test'
+                sh 'node sonarqube-scanner.js'
+                sh 'npm test'
                 }
             }
         }

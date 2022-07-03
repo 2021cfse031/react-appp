@@ -14,7 +14,7 @@ pipeline {
                 bat 'npm test'
                 }
             }
-        }
+        } //test
         stage('Build') { 
             steps {
                 nodejs(nodeJSInstallationName: 'nodejs18') {

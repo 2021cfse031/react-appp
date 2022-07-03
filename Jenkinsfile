@@ -22,7 +22,6 @@ pipeline {
                 }
             }
         }
-       
         stage('Run') { 
             steps {
                 nodejs(nodeJSInstallationName: 'nodejs18') {

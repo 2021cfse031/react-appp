@@ -29,6 +29,6 @@ pipeline {
                 // sh 'npm install --save-dev sonarqube-scanner'
                 }
             }
-        }       
+        }
     }   
 }

@@ -29,7 +29,7 @@ pipeline {
                         bat 'npm run build' 
                 }
             }
-        stage('Hosted on Server') {  
+        stage('Hosted on Static Server') {  
             steps { 
                 parallel (
                     a: {  

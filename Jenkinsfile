@@ -27,15 +27,17 @@ pipeline {
                 }
             }
         stage('hosted on static server') {  
-            steps {
-                        bat 'npx serve -s build' 
+            steps { 
+                parallel {
+                    a: {  bat 'serve -s build' }
+                    b: { bat 'node webdriver.js' }
+                    } 
                 }
             }    
-        stage('Selenium Test') {
-            steps {  nodejs(nodeJSInstallationName: 'nodejs18') {
-                        bat 'node webdriver.js'
-             }
-            }
-        }    
+        // stage('Selenium Test') {
+        //     steps {  nodejs(nodeJSInstallationName: 'nodejs18') {
+        //      }
+        //     }
+        // }    
     }
 }   

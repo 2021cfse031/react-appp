@@ -26,7 +26,7 @@ pipeline {
                         bat 'npm run build' 
                 }
             }
-        stage('Run') {  
+        stage('hosted on static server') {  
             steps {
                         bat 'npm install -g serve'
                         bat 'serve -s build' 

@@ -40,7 +40,14 @@ INSTALLED_APPS = [
     'collab_app',
     'corsheaders',
     'rest_framework',
+    'django_jenkins'
 ]
+
+PROJECT_APPS = (
+   'collab_app'
+)
+
+INSTALLED_APPS += PROJECT_APPS
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

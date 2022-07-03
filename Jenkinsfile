@@ -23,7 +23,7 @@ pipeline {
         }
         stage('Run') {  
             steps {
-                        bat 'npm build'
+                        bat 'npm run build'
                         bat 'node webdriver.js'
                 }
             }

@@ -33,9 +33,6 @@ pipeline {
                         bat 'npx serve -s build' 
                         },
                     b: { 
-                           bat 'sleep 20000'
-                        },
-                    c: { 
                         bat 'node webdriver.js' 
                         }
                     )

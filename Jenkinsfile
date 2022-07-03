@@ -23,12 +23,13 @@ pipeline {
         }
         stage('Run') {  
             steps {
-                        bat 'npm run build'
+                        bat 'set PUBLIC_URL=http://localhost:3000 && npm run build'
                 }
             }
         stage('Selenium Test') {
-            steps {
+            steps {  nodejs(nodeJSInstallationName: 'nodejs18') {
                         bat 'node webdriver.js'
+             }
             }
         }    
     }

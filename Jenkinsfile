@@ -1,6 +1,6 @@
 pipeline {
     agent {
-        any {
+        docker {
             image 'node:lts-bullseye-slim' 
             args '-p 3000:3000' 
         }
@@ -23,7 +23,7 @@ pipeline {
         }
         stage('Run') {  
             steps {
-                        bat 'set PUBLIC_URL=https://68e2-2405-201-c03d-30a4-a11e-da3f-76bb-ba56.in.ngrok.io  && npm run build'
+                        bat 'npm run build'
                 }
             }
         // stage('Selenium Test') {

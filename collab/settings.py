@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
+import encodings
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -40,14 +41,8 @@ INSTALLED_APPS = [
     'collab_app',
     'corsheaders',
     'rest_framework',
-    'django_jenkins'
+    'django_jenkins',
 ]
-
-PROJECT_APPS = (
-   'collab_app'
-)
-
-INSTALLED_APPS += PROJECT_APPS
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -149,5 +144,5 @@ REST_FRAMEWORK = {
 
 JENKINS_TASKS = (
     'django_jenkins.tasks.run_pep8',
-    'django_jenkins.tasks.run_pyflakes'
+    'django_jenkins.tasks.run_pyflakes',
 )

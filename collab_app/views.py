@@ -33,7 +33,7 @@ def drive_list(request):
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
-@api_view(['GET', 'PUT'])
+@api_view(['GET', 'PUT', 'DELETE'])
 def drive_detail(request, pk):
     """
     Retrieve, update or delete a  drive.
@@ -54,9 +54,9 @@ def drive_detail(request, pk):
             return Response(serializer.data)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
-    # elif request.method == 'DELETE':
-    #     drive.delete()
-    #     return Response(status=status.HTTP_204_NO_CONTENT)        
+    elif request.method == 'DELETE':
+        drive.delete()
+        return Response(status=status.HTTP_204_NO_CONTENT)        
 
 @api_view(['GET', 'POST'])
 def student_list(request):

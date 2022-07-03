@@ -21,6 +21,7 @@ from collab_app import views
 
 urlpatterns = [
     # path(r'docs/', include_docs_urls(title='Helpdesk API')), 
+    path('admin/', admin.site.urls),
     path('', views.apiOverview, name="Api Overview"), 
     
     path('drivelist/', views.drive_list, name="list-drive"),

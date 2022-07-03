@@ -22,17 +22,22 @@ pipeline {
             }
         }
         stage('Run') { 
-            steps {
-                nodejs(nodeJSInstallationName: 'nodejs18') {
-                bat 'npm start' 
-                // sh 'npm install --save-dev sonarqube-scanner'
+            steps  {
+                parallel { 
+                    a: {  nodejs(nodeJSInstallationName: 'nodejs18') {
+                     bat 'npm start' 
+                    // sh 'npm install --save-dev sonarqube-scanner'
+                       }
+                    }
+                    b: { bat 'python manage.py runserver --port=8001' 
+                    // sh 'npm install --save-dev sonarqube-scanner'
+                       }
+                    }
                 }
             }
         }
         stage('Start Bakend Server') {
-            steps { 
-                bat 'python manage.py runserver --port=8001'
-            }
+            echo 'its completed successfully'
         }
     }   
 }

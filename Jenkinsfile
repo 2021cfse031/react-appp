@@ -1,4 +1,4 @@
-pipeline {
+pipelines {
     agent {
         any {
             image 'node:lts-bullseye-slim' 

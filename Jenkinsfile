@@ -31,9 +31,6 @@ pipeline {
                 parallel (
                     a: {  
                         bat 'npx serve -s build' 
-                        },
-                    b: { 
-                        bat 'python manage.py runserver' 
                         }
                     )
                 }

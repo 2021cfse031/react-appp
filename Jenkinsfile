@@ -18,7 +18,6 @@ pipeline {
             steps {  // test
                 nodejs(nodeJSInstallationName: 'nodejs18') {
                 bat 'node sonarqube-scanner.js'
-                bat 'npm test'
                 }
             }
         }

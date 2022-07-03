@@ -14,7 +14,7 @@ function bookvaccination() {
     driver.findElement(webdriver.By.xpath('//*[@id="formbookbtn"]')).click();
     let time1;
     function navigatetohome() {
-        driver.navigate().to("http://localhost:3000/home")
+        driver.navigate().to("http://localhost:/home")
     }
     time1 = setTimeout(navigatetohome, 10000);
 }

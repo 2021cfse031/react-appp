@@ -35,7 +35,7 @@ pipeline {
         // }
         stage('Run') {  
             steps {
-                bat 'npm install'
+                bat 'npm start'
             }
         }
         stage('Start Bakend Server') {

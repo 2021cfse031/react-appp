@@ -21,16 +21,21 @@ pipeline {
                 }
             }
         }
-        stage('Run') { 
-            steps  {
-                parallel (
-                a: {
-                    bat 'npm start'
-                },
-                b: {
-                    bat 'python manage.py runserver --port=8001'
-                }
-                )
+        // stage('Run') { 
+        //     steps  {
+        //         parallel (
+        //         a: {
+        //             bat 'npm start'
+        //         },
+        //         b: {
+        //             bat 'python manage.py runserver --port=8001'
+        //         }
+        //         )
+        //     }
+        // }
+        stage('Run') {  
+            steps {
+                bat 'npm install'
             }
         }
         stage('Start Bakend Server') {

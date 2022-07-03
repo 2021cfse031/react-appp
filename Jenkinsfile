@@ -32,15 +32,13 @@ pipeline {
             }
         stage('Hosted on Static Server') {  
             steps { 
-                parallel (
-                    a: {  
-                        bat 'npx serve -s build' 
-                        }
-                    )
-                }
-            }             
+                     bat 'npx serve -s build' 
+                  }
+            }
         stage('Selenium Test') {
-            bat 'node webdriver.js'
+            steps { 
+                bat 'node webdriver.js'
+            }
         }    
     }
  }   

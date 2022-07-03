@@ -20,7 +20,7 @@ const Piechart = () => {
     let studentsVaccinated = 0;
   
     for(const i in chart){
-        if (chart[i].status === "completed") {
+        if (chart[i].status === "Complete") {
             studentsVaccinated ++;
         }
     }

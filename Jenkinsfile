@@ -8,12 +8,12 @@ pipeline {
     }  
     stage('build') {
       steps {
-        bat 'pip install -r requirements.txt'
+        bat 'virtualenv -p python3 testenv'
       }
     }
     stage('test') {
       steps {
-        bat 'python test.py'
+        bat 'cd testenv/Scripts/activate'
       }   
     }
   }

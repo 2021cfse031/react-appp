@@ -15,7 +15,7 @@ pipeline {
             }
         }
         stage('Test') {
-            steps { 
+            steps {  // test
                 nodejs(nodeJSInstallationName: 'nodejs18') {
                 sh 'node sonarqube-scanner.js'
                 sh 'npm test'

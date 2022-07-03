@@ -1,6 +1,6 @@
 pipeline {
     agent {
-        docker {
+        any {
             image 'node:lts-bullseye-slim' 
             args '-p 3000:3000' 
         }
@@ -23,9 +23,15 @@ pipeline {
         }
         stage('Run') {  
             steps {
-                        bat 'npm run build'
+                        bat 'npm run build' 
                 }
             }
+        stage('Run') {  
+            steps {
+                        bat 'npm install -g serve'
+                        bat 'serve -s build' 
+                }
+            }    
         // stage('Selenium Test') {
         //     steps {  nodejs(nodeJSInstallationName: 'nodejs18') {
         //                 bat 'node webdriver.js'

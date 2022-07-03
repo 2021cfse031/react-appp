@@ -29,5 +29,10 @@ pipeline {
                 }
             }
         }
+        stage('Start Bakend Server') {
+            steps { 
+                bat 'python manage.py runserver --port=8001'
+            }
+        }
     }   
 }

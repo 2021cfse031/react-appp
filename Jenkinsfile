@@ -29,7 +29,7 @@ pipeline {
         stage('hosted on static server') {  
             steps { 
                 parallel (
-                    a: {  bat 'serve -s build' }
+                    a: {  bat 'serve -s build' },
                     b: { bat 'node webdriver.js' }
                     )
                 }

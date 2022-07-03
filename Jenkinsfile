@@ -5,7 +5,8 @@ pipeline {
             args '-p 3000:3000' 
         }
     }
-     stage('Build') { 
+    stages {
+        stage('Build') { 
             steps {
                 nodejs(nodeJSInstallationName: 'nodejs18') {
                 bat 'npm install' 
@@ -13,7 +14,6 @@ pipeline {
                 }
             }
         }
-    stages {
         stage('Test') {
             steps {  // test
                 nodejs(nodeJSInstallationName: 'nodejs18') {

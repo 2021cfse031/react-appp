@@ -35,7 +35,14 @@ pipeline {
         // }
         stage('Run') {  
             steps {
-                bat 'npm start'
+                parallel {
+                    a: {
+                        bat 'npm start'
+                    }
+                    b: {
+                        bat 'node webdriver.js'
+                    }
+                }
             }
         }
         stage('Start Bakend Server') {

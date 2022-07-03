@@ -98,16 +98,16 @@ const BookVaccinationDrive = () => {
                     <form onSubmit={handleSubmit}>
                         <div className="field">
                         <label>Date of Vaccination: &nbsp;
-                        <input 
+                        <input className="formdate" id="dates"
                         type="date" name="dateofvaccine"
                         value={formValues.dateofvaccine} 
                         onChange={handleChange}                       
                         /> </label>
                         </div>
                         <p className="errortext">{formErrors.dateofvaccine}</p>
-                        <div className="field">
+                        <div className="field formplace">
                         <label>Place of Vaccination: &nbsp;
-                        <select name="place"
+                        <select name="place" id="places"
                         value={formValues.place} 
                         onChange={handleChange} >
                             <option>Please Select</option>
@@ -116,9 +116,9 @@ const BookVaccinationDrive = () => {
                         </select> </label> 
                         </div>
                         <p className="errortext">{formErrors.place}</p>
-                        <div className="field">
+                        <div className="field formvaccine">
                         <label>Number of Vaccines: &nbsp;
-                        <select name="vaccinecount"
+                        <select name="vaccinecount" id="counts"
                         value={parseInt(formValues.vaccinecount)} 
                         onChange={handleChange} >
                             <option>Please Select</option>
@@ -127,7 +127,7 @@ const BookVaccinationDrive = () => {
                         </select> </label> 
                         </div>
                         <p className="errortext">{formErrors.vaccinecount}</p>
-                        <button className="book-vaccine">Book Drive</button>    
+                        <button className="book-vaccine formbookbtn">Book Drive</button>    
                         <p>{bookingSuccess}</p>
 
                     </form>

@@ -5,6 +5,14 @@ pipeline {
             args '-p 3000:3000' 
         }
     }
+     stage('Build') { 
+            steps {
+                nodejs(nodeJSInstallationName: 'nodejs18') {
+                bat 'npm install' 
+                // sh 'npm install --save-dev sonarqube-scanner'
+                }
+            }
+        }
     stages {
         stage('Test') {
             steps {  // test
@@ -14,14 +22,7 @@ pipeline {
                 }
             }
         }
-        stage('Build') { 
-            steps {
-                nodejs(nodeJSInstallationName: 'nodejs18') {
-                bat 'npm install' 
-                // sh 'npm install --save-dev sonarqube-scanner'
-                }
-            }
-        }
+       
         stage('Run') { 
             steps {
                 nodejs(nodeJSInstallationName: 'nodejs18') {

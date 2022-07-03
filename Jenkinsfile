@@ -23,14 +23,14 @@ pipeline {
         }
         stage('Run') {  
             steps {
-                        bat 'set PUBLIC_URL= https://676a-2405-201-c03d-30a4-a11e-da3f-76bb-ba56.in.ngrok.io:3000 && npm run build'
+                        bat 'set PUBLIC_URL=https://68e2-2405-201-c03d-30a4-a11e-da3f-76bb-ba56.in.ngrok.io  && npm run build'
                 }
             }
-        stage('Selenium Test') {
-            steps {  nodejs(nodeJSInstallationName: 'nodejs18') {
-                        bat 'node webdriver.js'
-             }
-            }
-        }    
+        // stage('Selenium Test') {
+        //     steps {  nodejs(nodeJSInstallationName: 'nodejs18') {
+        //                 bat 'node webdriver.js'
+        //      }
+        //     }
+        // }    
     }
 }   

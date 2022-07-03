@@ -8,6 +8,8 @@ pipeline {
     }  
     stage('build') {
       steps {
+        bat 'pip install'
+        bat 'pip install virtualenv'
         bat 'virtualenv -p python3 testenv'
       }
     }

@@ -13,10 +13,11 @@ pipeline {
             }
         stage('Build') { 
             steps {
-                nodejs(nodeJSInstallationName: 'nodejs18') {
-                bat 'npm install' 
+                        nodejs(nodeJSInstallationName: 'nodejs18') {
+                        bat 'npm install' 
                 }
             }
+        }
         stage('Code Analysis Test') {
             steps {  
                 nodejs(nodeJSInstallationName: 'nodejs18') {
@@ -43,4 +44,4 @@ pipeline {
         }    
     }
  }   
-}
+

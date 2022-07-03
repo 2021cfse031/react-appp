@@ -6,9 +6,10 @@ const driver = new webdriver.Builder().forBrowser("chrome").build();
 
 // ask the browser to open a page
 
+await driver.manage().setTimeouts({ implicit: 10000 });
 
 function bookvaccination() {
-    driver.findElement(By.css(".formdate")).sendKeys("18-08-2022");
+    driver.findElement(webdriver.By.xpath('//*[@id="dates"]')).sendKeys("00-00-2022");
     driver.findElement(webdriver.By.xpath('//*[@id="places"]/option[3]')).click();
     driver.findElement(webdriver.By.xpath('//*[@id="counts"]/option[3]')).click();
     driver.findElement(webdriver.By.xpath('//*[@id="formbookbtn"]')).click();

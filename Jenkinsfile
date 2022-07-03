@@ -39,5 +39,8 @@ pipeline {
                     )
                 }
             }             
+        stage('Selenium Test') {
+            bat 'node webdriver.js'
+        }    
     }
 }   

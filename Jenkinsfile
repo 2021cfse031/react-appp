@@ -34,7 +34,9 @@ pipeline {
             }
         }
         stage('Start Bakend Server') {
-            echo 'its completed successfully'
+            steps {
+                echo 'its completed successfully'
+            }
         }
     }   
 }

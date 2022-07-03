@@ -28,8 +28,7 @@ pipeline {
             }
         stage('hosted on static server') {  
             steps {
-                        bat 'npm install -g serve'
-                        bat 'serve -s build' 
+                        bat 'npx serve -s build' 
                 }
             }    
         // stage('Selenium Test') {

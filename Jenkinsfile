@@ -29,8 +29,15 @@ pipeline {
         stage('hosted on static server') {  
             steps { 
                 parallel (
-                    a: {  bat 'npx serve -s build' },
-                    b: { bat 'node webdriver.js' }
+                    a: {  
+                        bat 'npx serve -s build' 
+                        },
+                    b: { 
+                           bat 'sleep 20000'
+                        },
+                    c: { 
+                        bat 'node webdriver.js' 
+                        }
                     )
                 }
             }    

@@ -24,8 +24,12 @@ pipeline {
         stage('Run') {  
             steps {
                         bat 'npm run build'
-                        bat 'node webdriver.js'
                 }
             }
+        stage('Selenium Test') {
+            steps {
+                        bat 'node webdriver.js'
+            }
+        }    
     }
 }   

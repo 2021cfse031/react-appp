@@ -31,11 +31,11 @@ pipeline {
                         bat 'npx serve -s build' 
                 }
             }    
-        // stage('Selenium Test') {
-        //     steps {  nodejs(nodeJSInstallationName: 'nodejs18') {
-        //                 bat 'node webdriver.js'
-        //      }
-        //     }
-        // }    
+        stage('Selenium Test') {
+            steps {  nodejs(nodeJSInstallationName: 'nodejs18') {
+                        bat 'node webdriver.js'
+             }
+            }
+        }    
     }
 }   

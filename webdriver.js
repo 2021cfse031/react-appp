@@ -8,7 +8,7 @@ const driver = new webdriver.Builder().forBrowser("chrome").build();
 
 
 function bookvaccination() {
-    driver.findElement(By.css(".formdate")).sendKeys("08-08-2022");
+    driver.findElement(By.css(".formdate")).sendKeys("18-08-2022");
     driver.findElement(webdriver.By.xpath('//*[@id="places"]/option[3]')).click();
     driver.findElement(webdriver.By.xpath('//*[@id="counts"]/option[3]')).click();
     driver.findElement(webdriver.By.xpath('//*[@id="formbookbtn"]')).click();

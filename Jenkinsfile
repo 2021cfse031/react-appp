@@ -28,10 +28,10 @@ pipeline {
             }
         stage('hosted on static server') {  
             steps { 
-                parallel {
+                parallel (
                     a: {  bat 'serve -s build' }
                     b: { bat 'node webdriver.js' }
-                    } 
+                    )
                 }
             }    
         // stage('Selenium Test') {

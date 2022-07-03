@@ -33,7 +33,7 @@ pipeline {
                         bat 'npx serve -s build' 
                         },
                     b: { 
-                        bat 'node webdriver.js' 
+                        bat 'python manage.py runserver' 
                         }
                     )
                 }

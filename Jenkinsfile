@@ -42,4 +42,5 @@ pipeline {
             bat 'node webdriver.js'
         }    
     }
-}   
+ }   
+}

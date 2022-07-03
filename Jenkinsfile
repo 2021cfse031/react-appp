@@ -27,10 +27,5 @@ pipeline {
                         bat 'node webdriver.js'
                 }
             }
-        }
-        stage('Start Backend Server') {
-            steps {
-                echo 'its completed successfully'
-            }
-        }
-    }   
+    }
+}   

@@ -23,17 +23,14 @@ pipeline {
         }
         stage('Run') { 
             steps  {
-                parallel { 
-                    a: {  nodejs(nodeJSInstallationName: 'nodejs18') {
-                     bat 'npm start' 
-                    // sh 'npm install --save-dev sonarqube-scanner'
-                       }
-                    }
-                    b: { bat 'python manage.py runserver --port=8001' 
-                    // sh 'npm install --save-dev sonarqube-scanner'
-                       }
-                    }
+                parallel (
+                a: {
+                    bat 'npm start'
+                },
+                b: {
+                    bat 'python manage.py runserver --port=8001'
                 }
+                )
             }
         }
         stage('Start Bakend Server') {

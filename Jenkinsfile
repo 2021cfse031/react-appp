@@ -11,7 +11,6 @@ pipeline {
                  echo 'Successfully fetched from Git'
                 }
             }
-        }
         stage('Build') { 
             steps {
                 nodejs(nodeJSInstallationName: 'nodejs18') {

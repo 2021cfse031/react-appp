@@ -8,7 +8,7 @@ pipeline {
     }  
     stage('build') {
       steps {
-        bat 'pip install'
+        bat 'python setup.py install'
         bat 'pip install virtualenv'
         bat 'virtualenv -p python3 testenv'
       }

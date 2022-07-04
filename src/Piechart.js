@@ -69,7 +69,6 @@ const Piechart = () => {
         data={data}
         height={400}
         options={options}
-
       />
     </div>
     </div>

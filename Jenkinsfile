@@ -35,7 +35,7 @@ pipeline {
                      bat 'npx serve -s build' 
                   }
             }
-        stage('Selenium Test') {
+        stage('Selenium Testing') {
             steps { 
                 bat 'node webdriver.js'
             }

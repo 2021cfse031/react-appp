@@ -7,7 +7,6 @@ import students from './data/studentslist.json';
 const Piechart = () => {
 
     const [chart, setChart] = useState({})
-
     useEffect(() => {
         fetch('http://127.0.0.1:8000/studentlist/')
         .then(res => { 

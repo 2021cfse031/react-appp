@@ -11,7 +11,7 @@ pipeline {
                  echo 'Successfully fetched from Git'
                 }
             }
-        stage('Build') { 
+        stage('Creating Node Environment') { 
             steps {
                         nodejs(nodeJSInstallationName: 'nodejs18') {
                         bat 'npm install' 

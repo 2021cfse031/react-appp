@@ -15,6 +15,9 @@ The main project goal is to implement a CICD Pipeline for the project and perfor
 
 # Project Screenshots
 
+# Idea of CICD Pipeline Implemention using Jenkins
+![Application](https://user-images.githubusercontent.com/94062868/177520334-07cac71e-019e-4925-9545-6eb86eeb5450.jpg)
+
 # Pipeline Configuration
 ![pipeline-input](https://user-images.githubusercontent.com/94062868/177508807-328b0719-7597-4f35-8019-45e6eb7a1fdd.PNG)
 ## Fig: Pipeline Configuration - Getting the project code from Github - Version Control Tool 

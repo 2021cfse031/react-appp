@@ -49,6 +49,20 @@ The main project goal is to implement a CICD Pipeline for the project and perfor
 ![selenium-testcase-output](https://user-images.githubusercontent.com/94062868/177508810-addd7ddf-6fc8-4816-96f4-b5bfa4a58047.PNG)
 ## Fig: Selenium Test Case Output - View 2
 
+# Assumptions made
+
+1. Student Coordinator is logged in successfully and is navigated to the Home / Dashboard page.
+2. Vaccination details are fetched from the backend and are available in JSON format.
+3. All the reports generated / uploaded are available in the .CSV format only.
+4. Assuming all the node module libraries are already installed and are ready to use.
+5. Assuming necessary JSON servers are already created and have user data in proper format.
+6. VS Code extension live server is installed.
+7. Vaccination are only of two types, Covishield, Covaxin.
+8. Pre-defined and Limited number of vaccines to be allotted to a vaccination drive.
+9. The Vaccination drive is conducted within the school and there are two halls allotted in the school for vaccination, i.e. Gandhi Hall and Nehru Bhavan.
+10. APIs are configured in a virtual environment named ‘testenv’, We assume to have this environment configured for running the application without any flaws.
+11. Jenkins, Docker Desktop, Sonarqube Server (use docker-compose.yml file and execute docker-compose up command), Selenium Webdriver, Ngrok tools are already installed in your pc and properly configured. 
+12. Github Repo is cloned locally.
 
 # Installation and Setup Instructions
 
